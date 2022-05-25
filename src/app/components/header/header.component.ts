@@ -12,4 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleAddTask = () => {
+    alert("Se ejecuto el boton add-task");
+  }
 }
