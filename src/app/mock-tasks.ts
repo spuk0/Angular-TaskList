@@ -1,5 +1,5 @@
-import {Tasks} from "./tasks"
-export const TASK: Tasks[] = [
+import {TaskInterface} from "./tasks"
+export const TASKS: TaskInterface[] = [
     {
         id: 1,
         text: "Terminar taskList",
@@ -19,7 +19,7 @@ export const TASK: Tasks[] = [
         reminder: true
     },
     {
-        id: 1,
+        id: 4,
         text: "Terminar POO",
         day: "25/05/22",
         reminder: false
