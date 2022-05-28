@@ -2,6 +2,7 @@
     los elementos de la lista, que son recibidos como parametros, 
     son objetos, por lo que usamos el parametro.atributo para la representacion.-->
 <div class="task">
-    <h3>{{task.text}}</h3>
+    <h3>{{task.text}} <fa-icon [icon]="faTimes" [ngStyle]="{'color':'red'}"></fa-icon></h3>
     <p>{{task.day}}</p>
+    <fa-icon [icon]="faCoffee"></fa-icon>
 </div>
