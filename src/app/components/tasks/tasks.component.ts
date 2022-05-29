@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {TASKS} from '../../mock-tasks';
+import {TaskService} from '../../service/task.service';
 import { TaskInterface } from 'src/app/tasks';
+
 
 
 @Component({
@@ -11,11 +12,16 @@ import { TaskInterface } from 'src/app/tasks';
 export class TasksComponent implements OnInit {
 
   //inicializamos una variable con la que usaremos la base de datos de la sig. manera:
-  arrayTasks: TaskInterface[] = TASKS; //Ojo que es un array donde cada elemento es un objeto.
-
-  constructor() { }
-
+  arrayTasks: TaskInterface[] = []; //Ojo que es un array donde cada elemento es un objeto.
+  //Inicializamos el servicio en el constructor
+  constructor(
+    private taskService: TaskService
+  ) { }
+  //Cuando se monte el componente se ejecuta esto:
   ngOnInit(): void {
+    this.taskService.getTask().subscribe((arrayTasks)=>{
+      this.arrayTasks = arrayTasks;
+    }); //Aca le doy valor a lo inicializado. Investigar metodo subscribe de los observables.
   }
 
 }
