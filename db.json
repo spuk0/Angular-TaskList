@@ -1,28 +1,28 @@
 {
-  "tasks":[
-      {
-          "id": 1,
-          "text": "Terminar taskListtttt",
-          "day": "25/05/22",
-          "reminder": true
-      },
-      {
-          "id": 2,
-          "text": "Terminar front del portfolio",
-          "day": "25/05/22",
-          "reminder": true
-      },
-      {
-          "id": 3,
-          "text": "Terminar base de datos",
-          "day": "25/05/22",
-          "reminder": true
-      },
-      {
-          "id": 4,
-          "text": "Terminar POO",
-          "day": "25/05/22",
-          "reminder": false
-      }
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Algebra",
+      "day": "07/07/22",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "text": "Terminar front del portfolio",
+      "day": "25/05/22",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "text": "Terminar base de datos",
+      "day": "25/05/22",
+      "reminder": false
+    },
+    {
+      "id": 4,
+      "text": "Terminar POO",
+      "day": "25/05/22",
+      "reminder": false
+    }
   ]
 }

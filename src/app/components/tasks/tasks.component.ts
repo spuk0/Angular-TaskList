@@ -23,5 +23,14 @@ export class TasksComponent implements OnInit {
       this.arrayTasks = arrayTasks;
     }); //Aca le doy valor a lo inicializado. Investigar metodo subscribe de los observables.
   }
+  deleteTask(task: TaskInterface){
+    this.taskService.deleteTask(task).subscribe(()=>{
+      this.arrayTasks = this.arrayTasks.filter(t => t.id !== task.id)
+    });
+  }
 
+  toggleReminder(task: TaskInterface){
+    task.reminder = !task.reminder;
+    this.taskService.updateTaskReminder(task).subscribe();
+  }
 }
