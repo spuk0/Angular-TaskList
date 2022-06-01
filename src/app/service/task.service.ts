@@ -20,7 +20,6 @@ export class TaskService {
   ) { }
 
   getTask (): Observable<TaskInterface[]>{ //Funcion que devuelve el array con los objetos que son cada lista.
-
     return this.http.get<TaskInterface[]>(this.apiUrl);
   }
   deleteTask (task: TaskInterface): Observable<TaskInterface>{
@@ -31,5 +30,9 @@ export class TaskService {
   updateTaskReminder (task: TaskInterface): Observable<TaskInterface>{ //para q impacte o se guarde el cambio en la base de datos
     const url = `${this.apiUrl}/${task.id}`;
     return this.http.put<TaskInterface>(url, task, httpOptions);
+  }
+
+  addTask (task: TaskInterface): Observable<TaskInterface>{ //para q impacte o se guarde el cambio en la base de datos
+    return this.http.post<TaskInterface>(this.apiUrl, task, httpOptions);
   }
 }
